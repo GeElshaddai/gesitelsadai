@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* background colour */
+  --primaryBgColor: #151b20;
+  --secondaryBgColor: #1b2730;
+
+  /* font colour */
+  --primaryColor: #ffffffe6;
+  --secondaryColor: #ffffff96;
+
+  --mainFont: "Montserrat", serif;
+
+  --border: 1px solid var(--secondaryBgColor);
+}
+
+body {
+  background-color: var(--primaryBgColor);
+  font-family: var(--mainFont);
+  color: var(--primaryColor);
+}
+
+.navBar {
+  font-family: var(--mainFont);
+  font-size: 1.15rem;
+}
+
+.home {
+  font-size: 1.3rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffffc6;
+}
+
+.jobTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff !important;
+}
+
+.homeButton {
+  pointer-events: fill;
+  padding-inline: 0.8rem;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border: 0.1rem solid #ffffff10;
+  border-radius: 10px;
+  background-color: var(--primaryBgColor);
+  color: rgba(0, 255, 255, 0.5);
+  transition: 0.5s ease;
+}
+
+.homeButtonIcon {
+  font-size: 2rem;
+}
+
+.homeButton:hover {
+  background-color: var(--secondaryBgColor);
+  color: aqua;
+}
+
+.sectionTitle > h2 {
+  font-size: 1.3rem;
+  color: var(--secondaryColor);
+}
+
+.sectionTitle > h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.about {
+  padding-block: 3rem;
+}
+
+.aboutBoxes {
+  padding-block: 3rem;
+  border-top: var(--border);
+}
+
+.imoCertItem:nth-child(1) {
+  align-self: flex-start;
+  align-content: center;
+  text-align: center;
+  padding: 0.4rem;
+  border-radius: 0 0 8px 0;
+  height: 3dvw;
+  width: 3dvw;
+  background-color: blue;
+}
+
+.imoCertItem:nth-child(2) {
+  font-weight: 900;
+}
+
+.imoCertItem:nth-child(3) {
+  align-self: flex-end;
+  align-content: center;
+  text-align: center;
+  padding: 0 0.5rem 0.5rem 0;
+}
+
+.contact {
+  border-top: var(--border);
+}
+
+.contactIntro {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 2.5rem;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+.contactsButtonWrap {
+  display: "flex";
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.contactsButton {
+  pointer-events: fill;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border: 0.1rem solid #ffffff10;
+  border-radius: 10px;
+  background-color: var(--primaryBgColor);
+  color: rgba(0, 255, 255, 0.8);
+  transition: 0.5s ease;
+}
+
+.contactsButton:hover {
+  background-color: var(--secondaryBgColor);
+  color: aqua;
+}
+
+.contactsButtonIcon {
+  font-size: 2rem;
+}
+
+.footer {
+  border-top: var(--border);
+  padding: 2rem;
+}
+
+.footerText {
+  font-size: 0.85rem;
+}
+
+.footerButton {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border: none;
+  background: none;
+  color: var(--secondaryColor);
+  transition: 0.5s ease;
+}
+
+.footerButton:hover {
+  color: var(--primaryColor);
+}
+
+.footerButtonIcon {
+  font-size: 1.75rem;
+}
+
+.experiencesBox {
+  background: var(--secondaryBgColor);
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  color: var(--secondaryColor);
+}
+
+.experiencesButton {
+  width: 100%;
+  background: none;
+  border: none;
+  padding-inline: 0;
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--primaryColor);
+}
+
+.experiencesImg {
+  height: 375px;
+  width: 375px;
+  border-radius: 1rem;
+  transition: all 0.5s ease;
+  object-position: center;
+  object-fit: cover;
+}
+
+.experiencesImg:hover {
+  transform: scale(1.025);
+}
+
+.educationTitle {
+  font-size: 1.5rem;
+}
+
+.educationDetails {
+  font-size: 1.15rem;
+}
+
+/* ReactBITS Scroll Velocity Start */
+.scrollVelocityBox {
+  border-top: var(--border);
+  border-bottom: var(--border);
+  position: absolute;
+  bottom: 0%;
+  color: var(--primaryColor);
+}
+
+.scrollVelocity {
+  position: relative;
+  padding-block: 1.5rem;
+}
+
+.scrollVelocity::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(21, 27, 32, 1) 5% /* dark on left */,
+    rgba(0, 0, 0, 0) 50% /* fade to transparent */,
+    rgba(0, 0, 0, 0) 0% /* transparent middle */,
+    rgba(21, 27, 32, 1) 95% /* dark on right */
+  );
+}
+
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.scroller span {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+/* ReactBITS Scroll Velocity End */
+
+/* ReactBITS Glare Hover Start  */
+.glareHover {
+  width: var(--gh-width);
+  height: var(--gh-height);
+  background: var(--gh-bg);
+  border-radius: var(--gh-br);
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  transition: 0.2s ease;
+}
+
+.glareHoverImg {
+  width: 100%;
+  height: 100%;
+}
+
+.glareHover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--gh-angle),
+    hsla(0, 0%, 0%, 0) 60%,
+    var(--gh-rgba) 70%,
+    hsla(0, 0%, 0%, 0),
+    hsla(0, 0%, 0%, 0) 100%
+  );
+  transition: var(--gh-duration) ease;
+  background-size: var(--gh-size) var(--gh-size), 100% 100%;
+  background-repeat: no-repeat;
+  background-position: -100% -100%, 0 0;
+}
+
+.glareHover:hover {
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.glareHover:hover::before {
+  background-position: 100% 100%, 0 0;
+}
+
+.glareHoverPlayOnce::before {
+  transition: none;
+}
+
+.glareHoverPlayOnce:hover::before {
+  transition: var(--gh-duration) ease;
+  background-position: 100% 100%, 0 0;
+}
+/* ReactBITS Glare Hover End */
+
+/* ReactBITS Ripple Grid Start */
+.rippleGridContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+/* ReactBITS Ripple Grid End */
