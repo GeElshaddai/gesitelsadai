@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ContactButtons from "@cores/ContactButtons";
 import RippleGrid from "@cores/RippleGrid";
+import FadeContent from "@cores/FadeContent";
 import styles from "@assets/styles.module.css";
 
 function Contact() {
@@ -29,18 +30,20 @@ function Contact() {
             }}
           >
             <Container style={{ textAlign: "center" }}>
-              <Row>
-                <Col md={{ span: 4, offset: 4 }}>
-                  <span className={styles.contactIntro}>
-                    Drop me a message. The ocean of ideas awaits!
-                  </span>
-                </Col>
-              </Row>
-              <ContactButtons
-                contactButtonsWrap={styles.contactsButtonWrap}
-                buttonStyle={styles.contactsButton}
-                iconStyle={styles.contactsButtonIcon}
-              />
+              <FadeContent delay={150}>
+                <Row>
+                  <Col md={{ span: 4, offset: 4 }}>
+                    <span className={styles.contactIntro}>
+                      Drop me a message. The ocean of ideas awaits!
+                    </span>
+                  </Col>
+                </Row>
+                <ContactButtons
+                  contactButtonsWrap={styles.contactsButtonWrap}
+                  buttonStyle={styles.contactsButton}
+                  iconStyle={styles.contactsButtonIcon}
+                />
+              </FadeContent>
             </Container>
           </div>
         </div>

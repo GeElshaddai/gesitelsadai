@@ -5,8 +5,8 @@ import {
   faAngleUp,
   faAngleDown,
   faShip,
-  faScrewdriverWrench,
-  faUserGear,
+  faGears,
+  faUsersGear,
   faSailboat,
   faStethoscope,
   faFireExtinguisher,
@@ -17,6 +17,7 @@ import {
 import styles from "@assets/styles.module.css";
 import GlareHover from "@cores/GlareHover";
 import { GetImgPng, GetImgJpg } from "@cores/GetImg";
+import FadeContent from "@cores/FadeContent";
 
 function About() {
   const exps = [
@@ -63,8 +64,8 @@ function About() {
   ];
 
   const imocerts = [
-    { title: "eng-iv", icon: faScrewdriverWrench },
-    { title: "erm", icon: faUserGear },
+    { title: "eng-iv", icon: faGears },
+    { title: "erm", icon: faUsersGear },
     { title: "scrb", icon: faSailboat },
     { title: "mc", icon: faStethoscope },
     { title: "aff", icon: faFireExtinguisher },
@@ -131,47 +132,49 @@ function About() {
   return (
     <section id="about" className={styles.about}>
       <Container className="py-5">
-        <Row>
-          <Col className={styles.sectionTitle}>
-            <h2>What have I done?</h2>
-            <h3>Experiences</h3>
-          </Col>
-        </Row>
-        <Row xs={1} md={2} className="mt-4">
-          <Col md={8}>
-            <div>
-              {exps.map((item, index) => (
-                <div className={`${styles.experiencesBox}`} key={index}>
-                  <button
-                    onClick={() => handleClick(index)}
-                    className={styles.experiencesButton}
-                  >
-                    {item.title}
-                    <span>
-                      {openIndex === index ? (
-                        <FontAwesomeIcon icon={faAngleUp} />
-                      ) : (
-                        <FontAwesomeIcon icon={faAngleDown} />
-                      )}
-                    </span>
-                  </button>
-                  {openIndex === index && <div>{item.content}</div>}
-                </div>
-              ))}
-            </div>
-          </Col>
-          <Col
-            md={4}
-            className="d-none d-md-flex justify-content-center align-items-center"
-          >
-            <img
-              loading="lazy"
-              src={GetImgJpg(`${switchOp.img}`)}
-              className={styles.experiencesImg}
-              alt={switchOp.altImg}
-            />
-          </Col>
-        </Row>
+        <FadeContent delay={150}>
+          <Row>
+            <Col className={styles.sectionTitle}>
+              <h2>What have I done?</h2>
+              <h3>Experiences</h3>
+            </Col>
+          </Row>
+          <Row xs={1} md={2} className="mt-4">
+            <Col md={8}>
+              <div>
+                {exps.map((item, index) => (
+                  <div className={`${styles.experiencesBox}`} key={index}>
+                    <button
+                      onClick={() => handleClick(index)}
+                      className={styles.experiencesButton}
+                    >
+                      {item.title}
+                      <span>
+                        {openIndex === index ? (
+                          <FontAwesomeIcon icon={faAngleUp} />
+                        ) : (
+                          <FontAwesomeIcon icon={faAngleDown} />
+                        )}
+                      </span>
+                    </button>
+                    {openIndex === index && <div>{item.content}</div>}
+                  </div>
+                ))}
+              </div>
+            </Col>
+            <Col
+              md={4}
+              className="d-none d-md-flex justify-content-center align-items-center"
+            >
+              <img
+                loading="lazy"
+                src={GetImgJpg(`${switchOp.img}`)}
+                className={styles.experiencesImg}
+                alt={switchOp.altImg}
+              />
+            </Col>
+          </Row>
+        </FadeContent>
       </Container>
 
       <Container className={styles.aboutBoxes}>
