@@ -25,7 +25,7 @@ function About() {
       title: "Web Development",
       content: (
         <ul>
-          <li>Framework : ReactJS, Django</li>
+          <li>Framework/libraries : ReactJS, Django</li>
           <li>DBMS : MySQL, SQLite</li>
           <li>Languages : Javascript, Python, PHP</li>
         </ul>
