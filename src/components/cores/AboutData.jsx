@@ -94,4 +94,16 @@ export const ibmcerts = [
     alt: "AI Literacy",
     loadImg: "lazy",
   },
+  {
+    img: "artificial-intelligence-fundamentals",
+    link: "https://www.credly.com/badges/b9b4e2b4-6091-4cd1-991c-025ed48bbe0e/public_url",
+    alt: "AI Fundamentals",
+    loadImg: "lazy",
+  },
+  {
+    img: "lifelong-professional-skills",
+    link: "https://www.credly.com/badges/64267e32-37c8-4d81-bcf9-e8b4dc428417/public_url",
+    alt: "Lifelong Professional Skills",
+    loadImg: "lazy",
+  },
 ];

@@ -97,7 +97,7 @@ body {
   border-radius: 0 0 8px 0;
   height: 3dvw;
   width: 3dvw;
-  background-color: blue;
+  background-color: var(--secondaryBgColor);
 }
 
 .imoCertItem:nth-child(2) {
@@ -109,6 +109,27 @@ body {
   align-content: center;
   text-align: center;
   padding: 0 0.5rem 0.5rem 0;
+}
+
+.certVisibilityButton {
+  padding-block: 0.5rem;
+  text-align: center;
+}
+
+.certVisibilityButton button {
+  background-color: var(--secondaryBgColor);
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryBgColor);
+  transition: 0.5s ease;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.4rem;
+}
+
+.certVisibilityButton button:hover {
+  background-color: var(--primaryBgColor);
+  color: var(--secondaryColor);
+  border: var(--border);
 }
 
 .contact {

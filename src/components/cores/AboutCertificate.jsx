@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShip } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +8,10 @@ import { GetImgPng } from "@cores/GetImg";
 import styles from "@assets/styles.module.css";
 
 function AboutCertificate() {
+  const [imoCertVisibility, setImoCertVisibility] = useState(5);
+
+  const [ibmCertVisibility, setIbmCertVisibility] = useState(5);
+
   return (
     <>
       <Row>
@@ -15,8 +20,8 @@ function AboutCertificate() {
         </Col>
       </Row>
       <Row xs={2} lg={5}>
-        {imocerts.map((imo, index) => (
-          <Col key={index} className="mt-4">
+        {imocerts.slice(0, imoCertVisibility).map((imo, index) => (
+          <Col key={index} className="mt-4" style={{ height: "150px" }}>
             <GlareHover
               glareColor="#ffffff"
               glareOpacity={0.3}
@@ -47,8 +52,25 @@ function AboutCertificate() {
           </Col>
         ))}
       </Row>
-      <Row xs={2} md={5}>
-        {ibmcerts.map((ibm, index) => (
+      <Row className={styles.certVisibilityButton}>
+        <Col>
+          {imoCertVisibility < imocerts.length ? (
+            <button onClick={() => setImoCertVisibility((prev) => prev + 5)}>
+              Show more
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                setImoCertVisibility(5);
+              }}
+            >
+              Show less
+            </button>
+          )}
+        </Col>
+      </Row>
+      <Row xs={2} lg={5}>
+        {ibmcerts.slice(0, ibmCertVisibility).map((ibm, index) => (
           <Col key={index} className="mt-4">
             <a href={ibm.link} target="_blank">
               <GlareHover
@@ -69,6 +91,23 @@ function AboutCertificate() {
             </a>
           </Col>
         ))}
+      </Row>
+      <Row className={styles.certVisibilityButton}>
+        <Col>
+          {ibmCertVisibility < ibmcerts.length ? (
+            <button onClick={() => setIbmCertVisibility((prev) => prev + 5)}>
+              Show more
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                setIbmCertVisibility(5);
+              }}
+            >
+              Show less
+            </button>
+          )}
+        </Col>
       </Row>
     </>
   );
