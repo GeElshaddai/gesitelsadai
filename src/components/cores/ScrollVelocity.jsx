@@ -182,8 +182,8 @@ function ScrollVelocityComponent() {
           >
             <FontAwesomeIcon icon={item.icon} />
             <span
+              className={styles.scrollerText}
               style={{
-                fontSize: "1.25rem",
                 fontWeight: "500",
                 marginLeft: "0.5rem",
               }}
