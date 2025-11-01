@@ -25,24 +25,12 @@ function About() {
             <ul>
               <li>Marine Engineering</li>
               <li>
-                Controlling the operation of the ship and care for person on
-                board
-              </li>
-            </ul>
-          </Col>
-        </Row>
-        <Row xs="auto" md={2}>
-          <Col className={styles.educationTitle}>
-            SMK P Nasional Purwokerto
-            <p style={{ fontSize: "1rem" }}>2019-2022</p>
-          </Col>
-          <Col className={styles.educationDetails}>
-            <ul>
-              <li>Engine and auxiliary system maintenance & repair</li>
-              <li>Understanding the piping systems on board the ship</li>
-              <li>
                 Implementation of MARPOL 73/78, SOLAS 74, and STCW 78 Amendment
                 2010
+              </li>
+              <li>
+                Controlling the operation of the ship and care for person on
+                board
               </li>
             </ul>
           </Col>
