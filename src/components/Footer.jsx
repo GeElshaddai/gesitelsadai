@@ -9,7 +9,7 @@ function Footer() {
         <div className="d-flex justify-content-center justify-content-md-between align-items-center">
           <div>
             <span className={styles.footerText}>
-              &copy; 2025 Gesit Elsadai. Alrights reserved.
+              &copy; 2025 Gesit Elsadai. All rights reserved.
             </span>
           </div>
           <div className="d-none d-md-flex">
