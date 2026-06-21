@@ -11,6 +11,25 @@ import {
 
 export const exps = [
   {
+    title: "Third Engineer",
+    content: (
+      <ul>
+        <li>
+          Operated and maintained ship machinery, including generators, pumps,
+          compressors, and auxiliary equipment.
+        </li>
+        <li>
+          Conducted routine inspections, preventive maintenance, and
+          troubleshooting to ensure safe and efficient vessel operations.
+        </li>
+        <li>
+          Monitored engine room systems and assisted with fuel, lubrication, and
+          safety management procedures in compliance with maritime regulations.
+        </li>
+      </ul>
+    ),
+  },
+  {
     title: "Web Development",
     content: (
       <ul>

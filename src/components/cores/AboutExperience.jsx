@@ -19,19 +19,26 @@ function AboutExperience() {
   switch (openIndex) {
     case 1:
       switchOp = {
+        img: "p_programming",
+        altImg: "Freepik : Web Development",
+        loadImg: "lazy",
+      };
+      break;
+    case 2:
+      switchOp = {
         img: "p_cook",
         altImg: "Freepik : Cooking",
         loadImg: "lazy",
       };
       break;
-    case 2:
+    case 3:
       switchOp = {
         img: "p_warehouse",
         altImg: "Freepik : Warehouse Operation",
         loadImg: "lazy",
       };
       break;
-    case 3:
+    case 4:
       switchOp = {
         img: "p_engineering",
         altImg: "Freepik : Ship",
@@ -41,8 +48,8 @@ function AboutExperience() {
 
     default:
       switchOp = {
-        img: "p_programming",
-        altImg: "Freepik : Web Development",
+        img: "p_engine",
+        altImg: "Freepik : Third Engineer",
         loadImg: "lazy",
       };
       break;
