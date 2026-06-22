@@ -8,9 +8,7 @@ function Footer() {
       <Container>
         <div className="d-flex justify-content-center justify-content-md-between align-items-center">
           <div>
-            <span className={styles.footerText}>
-              &copy; 2026 Gesit Elsadai. Alrights reserved.
-            </span>
+            <span className={styles.footerText}>2026 &#x7c; Gesit Elsadai</span>
           </div>
           <div className="d-none d-md-flex">
             <ContactButtons
